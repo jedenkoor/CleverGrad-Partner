@@ -1,0 +1,50 @@
+*:focus{
+	outline: none;
+}
+*{
+	box-sizing: border-box;
+}
+html,
+body{
+	display: block;
+	color: #000;
+	margin: 0;
+}
+a{
+	text-decoration: none;
+	color: unset;
+}
+p{
+	margin: 0;
+}
+ul{
+	list-style: none;
+	padding: 0;
+}
+img{
+	display: block;
+}
+.container{
+	width: 800px;
+	padding-left: 370px;
+	margin: 0 auto;
+	position: relative;
+	box-sizing: content-box;
+}
+.wrapper {
+	overflow-x: hidden;
+  display: flex;
+  min-height: 100vh;
+  flex-direction: column;
+}
+.content {
+  flex: 1;
+}
+
+@import 'common/adaptive';
+@import 'common/normalize';
+@import 'common/fonts';
+@import 'pages/partners';
+@import 'pages/partners-page';
+@import 'pages/project';
+@import 'pages/selection';

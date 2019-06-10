@@ -1,0 +1,34 @@
+extends ../template
+
+block variables
+	- var title = 'Партнеры'
+
+block content
+	.partners
+		h1.partners__title Наши партнеры
+		.partners-main
+			.partners-main-item
+				.partners-main-item__img
+					img(src="assets/images/HOUZEN-LOGO.png", alt="")
+				h2.partners-main-item__title Houzen
+				.partners-main-item__text <span>Телефон:</span> +7 (921) 907-46-35
+				.partners-main-item__text <span>Адрес:</span> ул. Ломоносова, д.1, офис П2.3
+				.partners-main-item__text <span>Сайт:</span> info@houzen-spb.ru
+				a.partners-main-item__btn(href="/partner-page.html") Подробнее
+			.partners-main-item
+				.partners-main-item__img
+					img(src="assets/images/GRANDLES-LOGO.png", alt="")
+				h2.partners-main-item__title Houzen
+				.partners-main-item__text <span>Телефон:</span> +7 (812) 449-72-26
+				.partners-main-item__text <span>Адрес:</span> ул. Заозёрная дом 8 офис 10
+				.partners-main-item__text <span>Сайт:</span> wood-wolf.ru
+				a.partners-main-item__btn(href="/partner-page.html") Подробнее
+			.partners-main-item
+				.partners-main-item__img
+					img(src="assets/images/WOODWOLF-LOGO.png", alt="")
+				h2.partners-main-item__title Houzen
+				.partners-main-item__text <span>Телефон:</span> +7 (921) 314-23-14
+				.partners-main-item__text <span>Адрес:</span> Выборгское шоссе, 212
+				.partners-main-item__text <span>Сайт:</span> wood-wolf.ru
+				a.partners-main-item__btn(href="/partner-page.html") Подробнее
+

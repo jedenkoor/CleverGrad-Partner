@@ -1,0 +1,198 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title>Ипотечный Калькулятор</title>
+    <meta content="" name="description">
+    <meta content="" name="keywords">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta content="ie=edge" http-equiv="x-ua-compatible">
+    <link rel="stylesheet" href="assets/styles/app.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="assets/scripts/jquery.inputmask.bundle.js"></script>
+    <script src="assets/scripts/main.js"></script>
+  </head>
+  <body>
+    <div class="container">
+      <div class="calc">
+        <div class="calc-main">
+          <div class="calc-main-top">
+            <div class="calc-main-top__title">Ипотека</div>
+            <div class="calc-main-top__text">При приобретении недвижимости в кредит, предлагаем воспользоваться нашим ипотечным калькулятором.<br><br>Результат расчета, полученного на нашем сервисе не является окончательным. Для получения профессиональной консультации и точного расчета ипотеки на недвижимость можно оставить заявку и наш специалист свяжется с Вами в самое ближайшее время.</div>
+            <div class="calc-main-top-info">
+              <div class="calc-main-top-info-item">
+                <div class="calc-main-top-info-item__title">Минимальный взнос</div><svg width="60" height="6" viewBox="0 0 60 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M54.374 2.219C53.178 3.175 52.146 4 49.996 4C47.846 4 46.813 3.175 45.618 2.219C44.317 1.179 42.843 0 39.991 0C37.141 0 35.668 1.179 34.367 2.219C33.173 3.175 32.142 4 29.993 4C27.844 4 26.812 3.175 25.617 2.219C24.317 1.179 22.843 0 19.992 0C17.141 0 15.668 1.179 14.368 2.22C13.174 3.175 12.143 4 9.995 4C7.847 4 6.816 3.175 5.622 2.219C4.322 1.179 2.85 0 0 0V2C2.147 2 3.178 2.825 4.372 3.78C5.672 4.821 7.145 6 9.995 6C12.845 6 14.318 4.821 15.619 3.781C16.812 2.825 17.843 2 19.992 2C22.141 2 23.173 2.825 24.368 3.781C25.668 4.821 27.142 6 29.993 6C32.844 6 34.317 4.821 35.617 3.78C36.811 2.825 37.842 2 39.991 2C42.141 2 43.174 2.825 44.369 3.781C45.669 4.821 47.144 6 49.996 6C52.848 6 54.322 4.821 55.623 3.781C56.818 2.825 57.85 2 60 2V0C57.148 0 55.674 1.179 54.374 2.219Z" fill="#00B160"/>
+</svg>
+                <div class="calc-main-top-info-item__value">20%</div>
+              </div>
+              <div class="calc-main-top-info-item">
+                <div class="calc-main-top-info-item__title">Сумма кредита</div><svg width="60" height="6" viewBox="0 0 60 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M54.374 2.219C53.178 3.175 52.146 4 49.996 4C47.846 4 46.813 3.175 45.618 2.219C44.317 1.179 42.843 0 39.991 0C37.141 0 35.668 1.179 34.367 2.219C33.173 3.175 32.142 4 29.993 4C27.844 4 26.812 3.175 25.617 2.219C24.317 1.179 22.843 0 19.992 0C17.141 0 15.668 1.179 14.368 2.22C13.174 3.175 12.143 4 9.995 4C7.847 4 6.816 3.175 5.622 2.219C4.322 1.179 2.85 0 0 0V2C2.147 2 3.178 2.825 4.372 3.78C5.672 4.821 7.145 6 9.995 6C12.845 6 14.318 4.821 15.619 3.781C16.812 2.825 17.843 2 19.992 2C22.141 2 23.173 2.825 24.368 3.781C25.668 4.821 27.142 6 29.993 6C32.844 6 34.317 4.821 35.617 3.78C36.811 2.825 37.842 2 39.991 2C42.141 2 43.174 2.825 44.369 3.781C45.669 4.821 47.144 6 49.996 6C52.848 6 54.322 4.821 55.623 3.781C56.818 2.825 57.85 2 60 2V0C57.148 0 55.674 1.179 54.374 2.219Z" fill="#00B160"/>
+</svg>
+                <div class="calc-main-top-info-item__value">до 15 млн. руб</div>
+              </div>
+              <div class="calc-main-top-info-item">
+                <div class="calc-main-top-info-item__title">Срок кредита</div><svg width="60" height="6" viewBox="0 0 60 6" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M54.374 2.219C53.178 3.175 52.146 4 49.996 4C47.846 4 46.813 3.175 45.618 2.219C44.317 1.179 42.843 0 39.991 0C37.141 0 35.668 1.179 34.367 2.219C33.173 3.175 32.142 4 29.993 4C27.844 4 26.812 3.175 25.617 2.219C24.317 1.179 22.843 0 19.992 0C17.141 0 15.668 1.179 14.368 2.22C13.174 3.175 12.143 4 9.995 4C7.847 4 6.816 3.175 5.622 2.219C4.322 1.179 2.85 0 0 0V2C2.147 2 3.178 2.825 4.372 3.78C5.672 4.821 7.145 6 9.995 6C12.845 6 14.318 4.821 15.619 3.781C16.812 2.825 17.843 2 19.992 2C22.141 2 23.173 2.825 24.368 3.781C25.668 4.821 27.142 6 29.993 6C32.844 6 34.317 4.821 35.617 3.78C36.811 2.825 37.842 2 39.991 2C42.141 2 43.174 2.825 44.369 3.781C45.669 4.821 47.144 6 49.996 6C52.848 6 54.322 4.821 55.623 3.781C56.818 2.825 57.85 2 60 2V0C57.148 0 55.674 1.179 54.374 2.219Z" fill="#00B160"/>
+</svg>
+                <div class="calc-main-top-info-item__value">до 25 лет</div>
+              </div>
+            </div>
+          </div>
+          <div class="calc-main-mortgage">
+            <div class="calc-main-mortgage__title">Рассчитайте ежемесячный платеж</div>
+            <div class="calc-main-mortgage-content">
+              <div class="calc-main-mortgage-content-item">
+                <div class="calc-main-mortgage-content-item__title">Cтоимость объекта (руб.)</div>
+                <input class="calc-main-mortgage-content-item__price" type="tel" id="price" name="input-vol" value="" data-min="1" data-max="15000000">
+                <input class="calc-main-mortgage-content-item__priceRange" type="text" name="my_range" value="" data-min="1" data-max="15000000" data-from="4200000" data-hide-min-max="true" data-hide-from-to="true">
+              </div>
+              <div class="calc-main-mortgage-content-item">
+                <div class="calc-main-mortgage-content-item__title">Срок кредита (лет)</div>
+                <input class="calc-main-mortgage-content-item__time" type="tel" id="time" name="input-vol" value="" data-min="1" data-max="25">
+                <input class="calc-main-mortgage-content-item__timeRange" type="text" name="my_range" value="" data-min="1" data-max="25" data-from="9" data-hide-min-max="true" data-hide-from-to="true">
+              </div>
+              <div class="calc-main-mortgage-content-item">
+                <div class="calc-main-mortgage-content-item__title">Первоначальный взнос (руб.)</div><span class="calc-main-mortgage-content-item__percent">10%</span>
+                <input class="calc-main-mortgage-content-item__initial" type="tel" id="fee" name="input-vol" value="" data-min="1" data-max="15000000">
+                <input class="calc-main-mortgage-content-item__initialRange" type="text" name="my_range" value="" data-min="1" data-max="15000000" data-from="2100000" data-hide-min-max="true" data-hide-from-to="true">
+              </div>
+            </div><a class="calc-main-mortgage-btn" data-fancybox data-options="{&quot;src&quot;: &quot;#SendForm&quot;, &quot;touch&quot;: false}" href="javascript:;">Отправить заявку</a>
+            <div class="calc-main-mortgage-bankList">
+              <div class="calc-main-mortgage-bankList__title">Банки партнёры</div>
+              <table class="calc-main-mortgage-bankList-table">
+                <thead>
+                  <tr>
+                    <th>Банк</th>
+                    <th>Ежемесячный платеж</th>
+                    <th>Ставка</th>
+                    <th>Взнос</th>
+                    <th>Срок</th>
+                  </tr>
+                </thead>
+                <tbody>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/vtb.png" alt="ВТБ"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">10,6</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">40</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/alfa.jpg" alt="Альфабанк"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">11,29</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">50</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/sngb.png" alt="Сургут"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">11,4</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">20</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/bars.png" alt="АкБарс"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">11,9</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">20</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/sber.png" alt="Сбербанк"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">11,4</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">30</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/souz.png" alt="Союз"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">12,5</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">30</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/selxoz.png" alt="РСХБ"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">13,5</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">30</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/SPb.png" alt="С-Пб"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">13</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">35</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/promsvyaz.png" alt="ПромСвязь"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">11,8</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">30</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/delta.png" alt="Дельта"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">12,5</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">40</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                  <tr class="calc-main-mortgage-bankList-partner">
+                    <td class="calc-main-mortgage-bankList-partner-logo"><img src="assets/images/delta.png" alt="Дельта"></td>
+                    <td class="calc-main-mortgage-bankList-partner-payment"><span class="value">0</span><span class="b-ruble"> руб.</span><span class="more">Подробнее</span></td>
+                    <td class="bet"><span class="b-bank__label">Ставка: </span><span class="value">13</span><span>%</span></td>
+                    <td class="fee-min"><span class="b-bank__label">Взнос: </span><span class="value">40</span><span>%</span></td>
+                    <td class="time-max"><span class="b-bank__label">Срок: </span><span>до </span><span class="value">25</span><span> лет</span></td>
+                  </tr>
+                </tbody>
+              </table>
+              <div class="calc-main-mortgage-bankList-nothing"><svg width="28" height="21" viewBox="0 0 28 21" fill="none" xmlns="http://www.w3.org/2000/svg">
+<path d="M1 20C1 20 5.10526 13 14 13C22.8947 13 27 20 27 20" stroke="#00B160" stroke-width="2" stroke-linecap="round"/>
+<circle cx="4.5" cy="1.5" r="1.5" fill="#00B160"/>
+<circle cx="23.5" cy="1.5" r="1.5" fill="#00B160"/>
+</svg>
+                <div class="calc-main-mortgage-bankList-nothing__text">К сожалению, по Вашему запросу ничего не найдено</div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+      <form class="popup-form" id="SendForm" action="#" style="display: none">
+        <div class="popup-form__title">Отправить заявку</div>
+        <div class="popup-form-pair">
+          <label for="name">Ваше имя</label>
+          <input type="text" id="name" name="name" placeholder="Иванов Иван" onfocus="this.placeholder = ''" onblur="this.placeholder = 'Иванов Иван'" required>
+        </div>
+        <div class="popup-form-pair">
+          <label for="tel">Телефон</label>
+          <input type="tel" id="tel" name="tel" placeholder="+7 (900) 000-00-00" onfocus="this.placeholder = ''" onblur="this.placeholder = '+7 (900) 000-00-00'" required>
+        </div>
+        <div class="popup-form-main">
+          <div class="popup-form-main-row">
+            <div class="popup-form-main-row__text">Стоимость участка:</div>
+            <div class="popup-form-main-row__value"><span id="popup-price">4200000</span> руб.</div>
+          </div>
+          <div class="popup-form-main-row">
+            <div class="popup-form-main-row__text">Срок кредита:</div>
+            <div class="popup-form-main-row__value"><span id="popup-time">9</span> лет</div>
+          </div>
+          <div class="popup-form-main-row">
+            <div class="popup-form-main-row__text">Первоначальный взнос:</div>
+            <div class="popup-form-main-row__value"><span id="popup-initial">2500000</span> руб.</div>
+          </div>
+        </div>
+        <div class="popup-form-row">
+          <label>
+            <input type="checkbox" name="privacy" required checked><span class="popup-form-row__checkbox"></span><span>Ознакомлен с <a href="">обработкой персональных данных</a></span>
+          </label>
+        </div>
+        <button class="popup-form__btn" type="submit">Отправить                  </button>
+      </form>
+    </div>
+  </body>
+</html>
