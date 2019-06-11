@@ -18,7 +18,6 @@ $(document).ready(function () {
 		} else {
 			$(document).find('.project-main-slider-navigation__bar').addClass('gallery-bar');
 		}
-		console.log(this.hash);
 		e.preventDefault();
 		projectTabContainers.hide();
 		projectTabContainers.filter(this.hash).fadeIn('slow');
@@ -61,6 +60,31 @@ $(document).ready(function () {
 		}
 	});
 
+	var villageTabContainers = $('.selection-villagemain-tab');
+	villageTabContainers.hide().filter(':first').fadeIn('slow');
+	$('.selection-villagemain-navigation__item').filter(':first').addClass('selected');
+	$('.selection-villagemain-navigation__item').click(function (e) {
+		if( $(this).hasClass('selected') ){
+			return false;
+		}
+		e.preventDefault();
+		villageTabContainers.hide();
+		villageTabContainers.filter(this.hash).fadeIn('slow');
+		$('.selection-villagemain-navigation__item').removeClass('selected');
+		$(this).addClass('selected');
+	});
+
+	$(document).find('[name="tel"]').inputmask({
+		mask: "+7 (999) 999-99-99",
+		showMaskOnHover: false,
+		showMaskOnFocus: true
+	});
+	$(document).find('[name="email"]').inputmask({ 
+		alias: "email",
+		showMaskOnHover: false,
+		showMaskOnFocus: true
+	});
+
 });
 
 $(document).on('click', '.selection-housemain-item-main-right__btn', function (e) {
@@ -75,4 +99,51 @@ $(document).on('click', '.selection-housemain-select__cancel', function (e) {
 	e.preventDefault();
 	$(this).closest('.selection-housemain-select-wrap').slideUp();
 	$(document).find('.selection-housemain-item').removeClass('disabled selected');
+});
+
+$(document).on('blur', 'input:not(input[name="tel"]):not(input[name="email"]), textarea', function(){
+	if( $(this).val() != '' ){
+			$(this).addClass('input-border');
+	} else {
+			$(this).removeClass('input-border');
+	}
+});
+$(document).on('blur', 'input[name="tel"], input[name="email"]', function(){
+	if ( $(this).inputmask("isComplete") ){
+			$(this).addClass('input-border');
+	} else {
+			$(this).removeClass('input-border');
+	}
+});
+$(document).on('click', 'button[type="submit"]', function(){
+	let inputs = $(this).closest('form').find('input[data-required=""]'),
+			temp = true;
+	if( $(this).closest('form').find('input[name="tel"][data-required=""]').length != 0 ){
+		if ( !$(this).closest('form').find('input[name="tel"][data-required=""]').hasClass('input-border') ) {
+			$(this).closest('form').find('input[name="tel"][data-required=""]').addClass('input-err');
+			temp = false;
+		} else {
+			$(this).closest('form').find('input[name="tel"][data-required=""]').removeClass('input-err');
+		}
+	}
+	if( $(this).closest('form').find('input[name="email"][data-required=""]').length != 0 ){
+		if ( !$(this).closest('form').find('input[name="email"][data-required=""]').hasClass('input-border') ) {
+			$(this).closest('form').find('input[name="email"][data-required=""]').addClass('input-err');
+				temp = false;
+		} else {
+			$(this).closest('form').find('input[name="email"][data-required=""]').removeClass('input-err');
+		}
+	}
+	for (var i = 0; i < inputs.length; i++) {
+			if ( !inputs.eq(i).hasClass('input-border') ) {
+					inputs.eq(i).addClass('input-err');
+					temp = false;
+			} else {
+					inputs.eq(i).removeClass('input-err');
+			}
+	}
+	console.log(temp)
+	if( temp == false ){
+			return false;
+	}
 });

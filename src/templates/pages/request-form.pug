@@ -1,12 +1,12 @@
 extends ../template
 
 block variables
-	- var title = 'Выбор участка'
+	- var title = 'Оформление заявки'
 
 block content
 	.selection
 		.selection-header
-			h1.selection-header__title Выберите участок
+			h1.selection-header__title Оформите заявку
 			.selection-header-items
 				a.selection-header-items-circle(href="house-selection.html").ready-stage 1
 					span.selection-header-items-circle__text Дом
@@ -18,24 +18,25 @@ block content
 				<svg xmlns="http://www.w3.org/2000/svg" width="210" height="2" viewBox="0 0 210 2" fill="none" class="ready-stage">
 					<rect width="210" height="2" fill="#00B160"/>
 				</svg>
-				.selection-header-items-circle.ready-stage 3
+				a.selection-header-items-circle.ready-stage(href="plot-selection.html") 3
 					span.selection-header-items-circle__text Участок
-				<svg xmlns="http://www.w3.org/2000/svg" width="210" height="2" viewBox="0 0 210 2" fill="none">
+				<svg xmlns="http://www.w3.org/2000/svg" width="210" height="2" viewBox="0 0 210 2" fill="none" class="ready-stage">
 					<rect width="210" height="2" fill="#00B160"/>
 				</svg>
-				.selection-header-items-circle 4 
+				.selection-header-items-circle.ready-stage 4 
 					span.selection-header-items-circle__text Заявка
-		.selection-plotmain
-			.selection-plotmain-map
-				img(src="assets/images/plot-map.png", alt="")
-			.selection-plotmain-village
-				.selection-plotmain-village__title Коттеджный поселок <span>Кавголовское озеро</span> <span>Участок № Т,4</span>
-				.selection-plotmain-village__img
-					img(src="assets/images/village-item1.png", alt="")
-				.selection-plotmain-village__square 40.12 соток
-				.selection-plotmain-village__price 2 400 000 руб.
-				a.selection-plotmain-village__btn(href="request.html") Далее
-		a.selection-bottom(href="village-selection.html")
+		form.selection-requestform(action="#")
+			.selection-requestform-pair
+				label(for="name") Ваше имя
+				input(type="text" placeholder="Иванов Иван" name="name" data-required="")
+			.selection-requestform-pair
+				label(for="tel") Телефон
+				input(type="tel" placeholder="+7 (900) 000-00-00" name="tel" data-required="")
+			.selection-requestform-pair
+				label(for="email") E-mail
+				input(type="text" placeholder="abc@ya.ru" name="email")
+			button(type='submit') Оформить
+		a.selection-bottom(href="request.html")
 			<svg xmlns="http://www.w3.org/2000/svg" width="5" height="9" viewBox="0 0 5 9" fill="none">
 				<path d="M4.5 0.5L0.5 4.5L4.5 8.5" stroke="black" stroke-opacity="0.65" stroke-linecap="round" stroke-linejoin="round"/>
 			</svg>

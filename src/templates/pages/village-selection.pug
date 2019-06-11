@@ -1,0 +1,88 @@
+extends ../template
+
+block variables
+	- var title = 'Выбор поселка'
+
+block content
+	.selection
+		.selection-header
+			h1.selection-header__title Выберите поселок
+			.selection-header-items
+				a.selection-header-items-circle(href="house-selection.html").ready-stage 1
+					span.selection-header-items-circle__text Дом
+				<svg xmlns="http://www.w3.org/2000/svg" width="210" height="2" viewBox="0 0 210 2" fill="none" class="ready-stage">
+					<rect width="210" height="2" fill="#00B160"/>
+				</svg>
+				.selection-header-items-circle.ready-stage 2
+					span.selection-header-items-circle__text Поселок
+				<svg xmlns="http://www.w3.org/2000/svg" width="210" height="2" viewBox="0 0 210 2" fill="none">
+					<rect width="210" height="2" fill="#00B160"/>
+				</svg>
+				.selection-header-items-circle 3
+					span.selection-header-items-circle__text Участок
+				<svg xmlns="http://www.w3.org/2000/svg" width="210" height="2" viewBox="0 0 210 2" fill="none">
+					<rect width="210" height="2" fill="#00B160"/>
+				</svg>
+				.selection-header-items-circle 4 
+					span.selection-header-items-circle__text Заявка
+		.selection-villagemain
+			ul.selection-villagemain-navigation
+				li
+					a.selection-villagemain-navigation__item.selected(href="#villageTab1") Ломоносовский район
+				li
+					a.selection-villagemain-navigation__item(href="#villageTab2") Всеволожский район
+			.selection-villagemain-tab(id="villageTab1")
+				.selection-villagemain-tab-item
+					.selection-villagemain-tab-item__title Коттеджный поселок <span>Кавголовское озеро</span>
+					.selection-villagemain-tab-item__img
+						img(src="assets/images/village-item1.png", alt="")
+					.selection-villagemain-tab-item__price Стоимость участка <span>от 168 000 рублей за сотку</span>
+					a.selection-villagemain-tab-item__btn(href="plot-selection.html") Выбрать
+				.selection-villagemain-tab-item
+					.selection-villagemain-tab-item__title Коттеджный поселок <span>Резиденция у озера</span>
+					.selection-villagemain-tab-item__img
+						img(src="assets/images/village-item2.png", alt="")
+					.selection-villagemain-tab-item__price Стоимость участка <span>от 3 000 000 рублей за участок</span>
+					a.selection-villagemain-tab-item__btn(href="plot-selection.html") Выбрать
+				.selection-villagemain-tab-item
+					.selection-villagemain-tab-item__title Коттеджный поселок <span>У Ладожского озера</span>
+					.selection-villagemain-tab-item__img
+						img(src="assets/images/village-item3.png", alt="")
+					.selection-villagemain-tab-item__price Стоимость участка <span>от 90 000 руб. за сотку</span>
+					a.selection-villagemain-tab-item__btn(href="plot-selection.html") Выбрать
+				.selection-villagemain-tab-item
+					.selection-villagemain-tab-item__title Коттеджный поселок <span>Кавголовское озеро</span>
+					.selection-villagemain-tab-item__img
+						img(src="assets/images/village-item1.png", alt="")
+					.selection-villagemain-tab-item__price Стоимость участка <span>от 168 000 рублей за сотку</span>
+					a.selection-villagemain-tab-item__btn(href="plot-selection.html") Выбрать
+				.selection-villagemain-tab-item
+					.selection-villagemain-tab-item__title Коттеджный поселок <span>Резиденция у озера</span>
+					.selection-villagemain-tab-item__img
+						img(src="assets/images/village-item2.png", alt="")
+					.selection-villagemain-tab-item__price Стоимость участка <span>от 3 000 000 рублей за участок</span>
+					a.selection-villagemain-tab-item__btn(href="plot-selection.html") Выбрать
+			.selection-villagemain-tab(id="villageTab2")
+				.selection-villagemain-tab-item
+					.selection-villagemain-tab-item__title Коттеджный поселок <span>У Ладожского озера</span>
+					.selection-villagemain-tab-item__img
+						img(src="assets/images/village-item3.png", alt="")
+					.selection-villagemain-tab-item__price Стоимость участка <span>от 90 000 руб. за сотку</span>
+					a.selection-villagemain-tab-item__btn(href="plot-selection.html") Выбрать
+				.selection-villagemain-tab-item
+					.selection-villagemain-tab-item__title Коттеджный поселок <span>Кавголовское озеро</span>
+					.selection-villagemain-tab-item__img
+						img(src="assets/images/village-item1.png", alt="")
+					.selection-villagemain-tab-item__price Стоимость участка <span>от 168 000 рублей за сотку</span>
+					a.selection-villagemain-tab-item__btn(href="plot-selection.html") Выбрать
+				.selection-villagemain-tab-item
+					.selection-villagemain-tab-item__title Коттеджный поселок <span>Резиденция у озера</span>
+					.selection-villagemain-tab-item__img
+						img(src="assets/images/village-item2.png", alt="")
+					.selection-villagemain-tab-item__price Стоимость участка <span>от 3 000 000 рублей за участок</span>
+					a.selection-villagemain-tab-item__btn(href="plot-selection.html") Выбрать
+		a.selection-bottom(href="house-selection.html")
+			<svg xmlns="http://www.w3.org/2000/svg" width="5" height="9" viewBox="0 0 5 9" fill="none">
+				<path d="M4.5 0.5L0.5 4.5L4.5 8.5" stroke="black" stroke-opacity="0.65" stroke-linecap="round" stroke-linejoin="round"/>
+			</svg>
+			span Назад
