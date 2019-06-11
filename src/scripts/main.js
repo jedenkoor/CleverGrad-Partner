@@ -63,3 +63,16 @@ $(document).ready(function () {
 
 });
 
+$(document).on('click', '.selection-housemain-item-main-right__btn', function (e) {
+	e.preventDefault();
+	$(document).find('.selection-housemain-item').addClass('disabled');
+	$(this).closest('.selection-housemain-item').removeClass('disabled');
+	$(this).closest('.selection-housemain-item').addClass('selected');
+	$(this).closest('.selection-housemain-wrap').find('.selection-housemain-select-wrap').slideDown();
+});
+
+$(document).on('click', '.selection-housemain-select__cancel', function (e) {
+	e.preventDefault();
+	$(this).closest('.selection-housemain-select-wrap').slideUp();
+	$(document).find('.selection-housemain-item').removeClass('disabled selected');
+});
