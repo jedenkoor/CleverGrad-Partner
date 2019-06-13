@@ -6,6 +6,7 @@
 }
 html,
 body{
+	overflow-x: hidden;
 	display: block;
 	color: #000;
 	margin: 0;
@@ -30,15 +31,6 @@ img{
 	margin: 0 auto;
 	position: relative;
 	box-sizing: content-box;
-}
-.wrapper {
-	overflow-x: hidden;
-  display: flex;
-  min-height: 100vh;
-  flex-direction: column;
-}
-.content {
-  flex: 1;
 }
 
 @import 'common/adaptive';

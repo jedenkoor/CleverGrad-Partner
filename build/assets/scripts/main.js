@@ -89,16 +89,24 @@ $(document).ready(function () {
 
 $(document).on('click', '.selection-housemain-item-main-right__btn', function (e) {
 	e.preventDefault();
+	if( $(this).hasClass('housemain-item-selected__btn') ){
+		return false;
+	}
 	$(document).find('.selection-housemain-item').addClass('disabled');
 	$(this).closest('.selection-housemain-item').removeClass('disabled');
 	$(this).closest('.selection-housemain-item').addClass('selected');
 	$(this).closest('.selection-housemain-wrap').find('.selection-housemain-select-wrap').slideDown();
+	$(this).siblings('.selection-housemain-item-main-right__btn-wrap').delay(250).fadeIn('fast');
+	$(this).fadeOut('fast');
+	
 });
 
 $(document).on('click', '.selection-housemain-select__cancel', function (e) {
 	e.preventDefault();
 	$(this).closest('.selection-housemain-select-wrap').slideUp();
 	$(document).find('.selection-housemain-item').removeClass('disabled selected');
+	$(this).closest('.selection-housemain-select-wrap').siblings('.selection-housemain-item').find('.selection-housemain-item-main-right__btn-wrap').fadeOut('fast');
+	$(this).closest('.selection-housemain-select-wrap').siblings('.selection-housemain-item').find('.selection-housemain-item-main-right__btn').delay(250).fadeIn('fast');
 });
 
 $(document).on('blur', 'input:not(input[name="tel"]):not(input[name="email"]), textarea', function(){

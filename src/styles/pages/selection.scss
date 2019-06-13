@@ -11,7 +11,6 @@ input.input-border{
 	color: #000000!important;
 }
 
-
 .selection{
 	font-family: 'Avenir Next Cyr';
 	&-header{
@@ -144,10 +143,16 @@ input.input-border{
 			&-main{
 				display: flex;
 				&-left{
-					display: flex;
-					flex-wrap: wrap;
-					align-items: flex-start;
 					margin-bottom: -20px;
+					&-items{
+						display: flex;
+						flex-wrap: wrap;
+						align-items: flex-start;
+					}
+					&-row{
+						display: flex;
+						width: 100%;
+					}
 					&-item{
 						width: 50%;
 						font-size: 14px;
@@ -165,9 +170,13 @@ input.input-border{
 					display: flex;
 					flex-direction: column;
 					justify-content: flex-end;
-					align-items: flex-end;
+					align-items: center;
 					&__price{
 						font-size: 18px;
+					}
+					&-wrap{
+						width: 159px;
+						height: 60px;
 					}
 					&__btn{
 						background: #00B160;
@@ -182,6 +191,25 @@ input.input-border{
 						align-items: center;
 						margin-top: 20px;
 						cursor: pointer;
+						&-wrap{
+							display: none;
+							.housemain-item-selected__btn{
+								background: none;
+								cursor: auto;
+								color: #000000;
+								position: relative;
+								&:before{
+									content: '';
+									position: absolute;
+									width: 14px;
+									height: 10px;
+									left: 5px;
+									top: 50%;
+									transform: translateY(-50%);
+									background: url('../images/icon-check.svg') center no-repeat;
+								}
+							}
+						}
 					}
 				}
 			}
@@ -200,6 +228,7 @@ input.input-border{
 				margin: 0 15px;
 				color: rgba(0, 0, 0, 0.5);
 				transition: 0.3s;
+				font-size: 14px;
 				&.selected{
 					color: #000;
 				}
@@ -232,6 +261,7 @@ input.input-border{
 				&__img{
 					img{
 						max-width: 250px;
+						width: 100%;
 						height: auto;
 					}
 				}
@@ -356,10 +386,10 @@ input.input-border{
 				height: 200px;
 				overflow: hidden;
 				img{
-					height: 100%;
-					position: relative;
-					left: 50%;
-					transform: translateX(-50%);
+					height: auto;
+					width: auto;
+					max-width: 100%;
+					min-height: 100%;
 				}
 			}
 			&-info{
@@ -460,6 +490,7 @@ input.input-border{
 			}
 			> svg{
 				margin-bottom: 35px;
+				width: 100%;
 			}
 			&__btn{
 				width: 100%;
@@ -529,6 +560,384 @@ input.input-border{
 		color: rgba(0, 0, 0, 0.65);
 		svg{
 			margin-right: 10px;
+		}
+	}
+}
+
+@include w1024{
+	.selection{
+		padding: 0 20px;
+		&-header{
+			left: 0;
+			padding-bottom: 45px;
+			&__title{
+				font-size: 18px;
+			}
+			&-items{
+				svg{
+					width: 135px;
+				}
+			}
+		}
+		&-housemain{
+			&-item{
+				&__img{
+					width: 228px;
+					height: 217px;
+				}
+				&-top{
+					flex-direction: column;
+					align-items: flex-start;
+					margin-bottom: 20px;
+					&__title{
+						margin-bottom: 25px;
+					}
+				}
+				&-wrap{
+					position: relative;
+				}
+				&-main{
+					&-left{
+						width: 100%;
+						display: flex;
+						align-items: flex-start;
+						flex-direction: row-reverse;
+						margin-bottom: 0;
+						margin-top: -40px;
+						&-items{
+							flex-direction: column;
+							width: 50%;
+						}
+						&-row{
+							width: 50%;
+							margin-top: 35px;
+						}
+						&-item{
+							width: 100%;
+							margin-bottom: 15px;
+							&:last-child{
+								margin-bottom: 0;
+							}
+						}
+					}
+					&-right{
+						&__price{
+							position: absolute;
+							white-space: nowrap;
+							top: 20px;
+							right: 20px;
+						}
+						&-wrap{
+							width: auto;
+							height: auto;
+						}
+						&__btn{
+							position: absolute;
+							left: 20px;
+							bottom: 20px;
+							width: 139px;
+							height: 35px;
+							font-size: 12px;
+							&-wrap{
+								position: absolute;
+								left: 20px;
+								bottom: 20px;
+								.selection-housemain-item-main-right__btn{
+									position: relative;
+									left: auto;
+									bottom: auto;
+								}
+							}
+						}
+					}
+				}
+			}
+			&-select{
+				padding-top: 30px;
+				padding-bottom: 10px;
+				&__confirm, 
+				&__cancel{
+					width: 139px;
+					height: 35px;
+					font-size: 12px;
+				}
+			}
+		}
+		&-villagemain{
+			max-width: 873px;
+			margin: 178px auto 0;
+			min-height: calc(100vh - 219px);
+			&-navigation{
+				margin-bottom: 30px;
+				&__item{
+					font-size: 12px
+				}
+			}
+			&-tab{
+				&-item{
+					height: 341px;
+					justify-content: flex-start;
+					&__title{
+						font-size: 14px;
+						line-height: 21px;
+						margin-bottom: 5px;
+					}
+					&__price{
+						font-size: 12px;
+						line-height: 18px;
+						margin-top: auto;
+						margin-bottom: 20px;
+					}
+					&__btn{
+						width: 131px;
+						height: 34px;
+						font-size: 12px;
+					}
+					&__img{
+						img{
+							max-width: 100%;
+							width: auto;
+							height: auto;
+							max-height: 143px;
+						}
+					}
+				}
+			}
+		}
+		&-plotmain{
+			padding: 0;
+			&-village{
+				flex: 0 0 230px;
+				height: 341px;
+				&__title{
+					font-size: 14px;
+					line-height: 21px;
+				}
+				&__img{
+					img{
+						max-width: 100%;
+						width: auto;
+						height: auto;
+						max-height: 143px;
+					}
+				}
+				&__square{
+					font-size: 12px;
+					line-height: 18px;
+				}
+				&__price{
+					font-size: 12px;
+					line-height: 18px;
+				}
+				&__btn{
+					width: 131px;
+					height: 33px;
+					font-size: 12px;
+				}
+			}
+		}
+		&-requestmain{
+			&-house{
+				width: 229px;
+				height: 284px;
+				&-info{
+					padding: 18px 10px;
+					&-row{
+						flex-direction: column;
+						align-items: flex-start;
+						justify-content: space-between;
+						font-size: 14px;
+					}
+					&__btn{
+						display: none;
+					}
+					&__price{
+						margin-bottom: 15px;
+						font-size: 14px;
+					}
+				}
+				&__img{
+					height: 157px;
+				}
+			}
+			&-village{
+				padding: 18px 10px;
+				width: 229px;
+				height: 284px;
+				&__title{
+					font-size: 14px;
+					line-height: 21px;
+				}
+				&__img{
+					img{
+						max-width: 100%;
+						width: auto;
+						height: auto;
+						max-height: 120px;
+					}
+				}
+				&__square,
+				&__price{
+					font-size: 12px;
+					line-height: 18px;
+				}
+			}
+			> svg{
+				height: 284px;
+				width: 10px;
+			}
+			&-total{
+				width: 230px;
+				&-row{
+					margin-bottom: 25px;
+					font-size: 14px;
+				}
+				> svg{
+					margin-bottom: 25px;
+				}
+				&__btn{
+					height: 35px;
+					font-size: 12px;
+					margin-top: -5px;
+				}
+			}
+		}
+	}
+}
+
+@include w480{
+	.selection{
+		padding: 0 10px;
+		&-header{
+			padding-bottom: 35px;
+			&__title{
+				margin: 20px 0;
+			}
+			&-items{
+				svg{
+					width: 61px;
+				}
+			}
+		}
+		&-housemain{
+			margin: 148px auto 0;
+		}
+		&-villagemain{
+			margin: 148px auto 0;
+			min-height: calc(100vh - 189px);
+			&-navigation{
+				&__item{
+					text-align: center;
+					display: inline-block;
+				}
+			}
+			&-tab{
+				flex-direction: column;
+				align-items: center;
+				&-item{
+					width: 300px;
+    			padding-right: 10px;
+					height: auto;
+					flex: 0 0 209px;
+					padding-left: 140px;
+					position: relative;
+					align-items: flex-start;
+					margin-bottom: 25px;
+					&__price{
+						text-align: left;
+					}
+					&__img{
+						position: absolute;
+						left: 10px;
+						width: 120px;
+						height: 120px;
+					}
+					&__title{
+						text-align: left;
+					}
+					&__btn{
+						width: calc(100% + 130px);
+						margin-left: -130px;
+					}
+				}
+			}
+		}
+		&-plotmain{
+			margin: 148px auto 0;
+			min-height: calc(100vh - 189px);
+			height: auto;
+			flex-direction: column;
+			align-items: center;
+			justify-content: flex-start;
+			&-map{
+				margin-bottom: 30px;
+				margin-right: 0;
+				width: 300px;
+			}
+			&-village{
+				width: 300px;
+				flex: 0 0 209px;
+				padding-left: 140px;
+				position: relative;
+				align-items: flex-start;
+				margin-bottom: 25px;
+				&__img{
+					position: absolute;
+					left: 10px;
+					width: 120px;
+					height: 120px;
+				}
+				&__title{
+					text-align: left;
+				}
+				&__btn{
+					width: calc(100% + 120px);
+					margin-left: -130px;
+				}
+			}
+		}
+		&-requestmain{
+			margin: 148px auto 0;
+			min-height: calc(100vh - 189px);
+			flex-direction: column;
+			align-items: center;
+			&-house{
+				width: 300px;
+			}
+			> svg{
+				height: auto;
+				width: 20px;
+				margin: 10px 0;
+			}
+			&-village{
+				width: 300px;
+				height: 154px;
+				padding-left: 140px;
+				position: relative;
+				align-items: flex-start;
+				margin-bottom: 25px;
+				&__img{
+					position: absolute;
+					left: 10px;
+				}
+				&__title{
+					text-align: left;
+				}
+			}
+			&-total{
+				padding-left: 0;
+				width: 300px;
+				margin-bottom: 20px;
+				> svg{
+					width: 100%;
+				}
+				&-row{
+					justify-content: flex-start;
+					span{
+						width: 50%;
+					}
+				}
+			}
 		}
 	}
 }

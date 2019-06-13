@@ -198,3 +198,46 @@
 		}
 	}
 }
+
+@include w1024{
+	.project{
+		padding: 0 20px;
+		&-main{
+			margin-bottom: 20px;
+			&__title{
+				margin-bottom: 20px;
+				font-size: 24px;
+			}
+			&__location{
+				font-size: 12px;
+				margin-bottom: 20px;
+			}
+			&__genplan{
+				font-size: 12px;
+				margin-bottom: 20px;
+			}
+			&-slider{
+				width: 350px;
+				height: 350px;
+				&__item{
+					height: 350px;
+				}
+			}
+			&-items{
+				margin-bottom: 20px;
+				&-item{
+					svg{
+						width: 30px;
+					}
+				}
+			}
+			&-row{
+				&__btn{
+					width: 150px;
+					height: 35px;
+					font-size: 12px;
+				}
+			}
+		}
+	}
+}

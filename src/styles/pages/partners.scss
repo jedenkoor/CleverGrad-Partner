@@ -60,3 +60,23 @@
 		}
 	}
 }
+
+@include w1024{
+	.container{
+		width: auto;
+		padding-left: 0;
+	}
+	.partners{
+		padding: 0 20px;
+		&__title{
+			margin-bottom: 30px;
+			font-size: 24px;
+		}
+		&-main{
+			&-item{
+				width: calc(50% - 20px);
+				margin: 0 10px 20px;
+			}
+		}
+	}
+}
