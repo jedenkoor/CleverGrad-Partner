@@ -80,3 +80,18 @@
 		}
 	}
 }
+
+@include w480{
+	.partners{
+		padding: 0 10px;
+		&-main{
+			flex-direction: column;
+			margin: 0;
+			&-item{
+				width: 100%;
+				margin: 0 0 20px;
+				padding: 20px 10px;
+			}
+		}
+	}
+}

@@ -227,3 +227,118 @@
 		}
 	}
 }
+
+@include w480{
+	.partners-page{
+		&-info{
+			flex-direction: column;
+			margin-bottom: 30px;
+			&__img{
+				margin-bottom: 30px;
+				width: 240px;
+				height: 192px;
+				margin: 0 auto 30px;
+			}
+			&-items{
+				flex-direction: column;
+				&-item{
+					width: 100%;
+					margin-bottom: 30px;
+				}
+			}
+			&__btn{
+				margin-top: 0;
+				width: 100%;
+			}
+		}
+		&-about{
+			&__text p{
+				margin-bottom: 25px;
+			}
+			&-item{
+				width: 100%;
+				float: none;
+				p:first-child{
+					margin-bottom: 15px;
+				}
+			}
+		}
+		&-projects{
+			&-items{
+				&-item{
+					flex-direction: column;
+					width: 300px;
+					margin: 0 auto 20px;
+					position: relative;
+					&__img{
+						height: 209px;
+						width: 100%;
+						img{
+							height: auto;
+							width: auto;
+							max-width: 100%;
+							min-height: 100%;
+						}
+					}
+					&-wrap{
+						padding: 0;
+					}
+					&-top{
+						padding: 20px;
+						margin: 0;
+						position: relative;
+						flex-direction: column;
+						&:before{
+							content: '';
+							width: 50px;
+							height: 50px;
+							background: url('../images/slideDown-arr.svg') center no-repeat;
+							position: absolute;
+							right: 0;
+							top: 50%;
+							transform: translateY(-50%);
+							transition: 0.3s;
+						}
+						&.out{
+							&:before{
+								transform: translateY(-50%) rotate(180deg);
+							}
+						}
+						&__price{
+							font-size: 18px;
+						}
+						&__title{
+							margin-bottom: 15px;
+						}
+					}
+					&-main{
+						flex-direction: column;
+						border-top: 1px solid #EAEAEA;
+						padding: 20px;
+						display: none;
+					}
+					&-square{
+						margin-top: 25px;
+						margin-bottom: 25px;
+					}
+					&-adv{
+						flex-direction: column;
+						&-item{
+							width: 100%;
+							margin-bottom: 15px;
+							&:first-child{
+								margin-bottom: 15px;
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+}
+
+@media screen and (max-width: 340px){
+	.partners-page{
+		padding: 0 10px;
+	}
+}

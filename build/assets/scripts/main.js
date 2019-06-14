@@ -98,7 +98,6 @@ $(document).on('click', '.selection-housemain-item-main-right__btn', function (e
 	$(this).closest('.selection-housemain-wrap').find('.selection-housemain-select-wrap').slideDown();
 	$(this).siblings('.selection-housemain-item-main-right__btn-wrap').delay(250).fadeIn('fast');
 	$(this).fadeOut('fast');
-	
 });
 
 $(document).on('click', '.selection-housemain-select__cancel', function (e) {
@@ -107,7 +106,39 @@ $(document).on('click', '.selection-housemain-select__cancel', function (e) {
 	$(document).find('.selection-housemain-item').removeClass('disabled selected');
 	$(this).closest('.selection-housemain-select-wrap').siblings('.selection-housemain-item').find('.selection-housemain-item-main-right__btn-wrap').fadeOut('fast');
 	$(this).closest('.selection-housemain-select-wrap').siblings('.selection-housemain-item').find('.selection-housemain-item-main-right__btn').delay(250).fadeIn('fast');
+	$(this).closest('.selection-housemain-select-wrap').siblings('.selection-housemain-item').find('.selection-housemain-item__selected').fadeOut('fast');
 });
+
+if( screen.width < 768 ){
+
+	$(document).on('click', '.selection-housemain-item__img', function (e) {
+		if( $(this).closest('.selection-housemain-item').hasClass('selected') ){
+			return false;
+		}
+		$(document).find('.selection-housemain-item').addClass('disabled');
+		$(this).closest('.selection-housemain-item').removeClass('disabled');
+		$(this).closest('.selection-housemain-item').addClass('selected');
+		$(this).closest('.selection-housemain-wrap').find('.selection-housemain-select-wrap').slideDown();
+		$(this).closest('.selection-housemain-wrap').find('.selection-housemain-item__selected').css("display", "flex").hide().fadeIn('fast');
+	});
+	$(document).on('click', 'a.selection-housemain-item', function (e) {
+			e.preventDefault();
+	});
+
+	$(document).on('click', '.partners-page-projects-items-item-top', function (e) {
+		e.preventDefault();
+		$(this).toggleClass('out');
+		$(this).next().slideToggle();
+		$('.partners-page-projects-items-item-top').not(this).removeClass('out').next().slideUp();
+	});
+
+	$(document).on('click', '.selection-housemain-item-top', function(){
+		$(this).toggleClass('out');
+		$(this).next().slideToggle();
+		$('.selection-housemain-item-top').not(this).removeClass('out').next().slideUp();
+	});
+
+}
 
 $(document).on('blur', 'input:not(input[name="tel"]):not(input[name="email"]), textarea', function(){
 	if( $(this).val() != '' ){
