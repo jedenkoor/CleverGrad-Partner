@@ -129,13 +129,11 @@ if( screen.width < 768 ){
 		e.preventDefault();
 		$(this).toggleClass('out');
 		$(this).next().slideToggle();
-		$('.partners-page-projects-items-item-top').not(this).removeClass('out').next().slideUp();
 	});
 
 	$(document).on('click', '.selection-housemain-item-top', function(){
 		$(this).toggleClass('out');
 		$(this).next().slideToggle();
-		$('.selection-housemain-item-top').not(this).removeClass('out').next().slideUp();
 	});
 
 }

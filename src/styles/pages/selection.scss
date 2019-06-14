@@ -932,9 +932,12 @@ input.input-border{
 			margin: 148px auto 0;
 			min-height: calc(100vh - 189px);
 			&-navigation{
+				margin-bottom: 20px;
+				margin-top: -10px;
 				&__item{
 					text-align: center;
 					display: inline-block;
+					padding: 10px;
 				}
 			}
 			&-tab{
